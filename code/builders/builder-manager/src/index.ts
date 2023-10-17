@@ -112,6 +112,7 @@ export const getConfig: ManagerBuilder['getConfig'] = async (options) => {
 export const executor = {
   get: async () => {
     const { build } = await import('esbuild');
+    console.log(build);
     return build;
   },
 };
