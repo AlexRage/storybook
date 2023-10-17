@@ -1,7 +1,13 @@
 import type { FC, MouseEvent } from 'react';
+import { useState } from 'react';
 import React from 'react';
 
 import { styled } from '@storybook/theming';
+
+const MyComponent = () => {
+  const [count, update] = useState(0); 
+  return <div onClick={() => update(count + 1)}>{count}</div>
+}
 
 const Container = styled.div(({ theme }) => ({
   position: 'absolute',
