@@ -1,7 +1,13 @@
 import type { FC } from 'react';
+import { useState } from 'react';
 import React from 'react';
 import { styled } from '@storybook/theming';
 import { transparentize } from 'polished';
+
+const MyComponent2 = () => {
+  const [count, update] = useState(0); 
+  return <div onClick={() => update(count + 1)}>{count}</div>
+}
 
 const BadgeWrapper = styled.div<BadgeProps>(
   ({ theme }) => ({
