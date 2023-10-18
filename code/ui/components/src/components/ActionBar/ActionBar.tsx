@@ -9,6 +9,16 @@ const MyComponent = () => {
   return <div onClick={() => update(count + 1)}>{count}</div>
 }
 
+const MyComponent2 = () => {
+  const [count, update] = useState(0); 
+  return <div onClick={() => update(count + 1)}>{count}</div>
+}
+
+const MyComponent3 = () => {
+  const [count, update] = useState(0); 
+  return <div onClick={() => update(count + 1)}>{count}</div>
+}
+
 const Container = styled.div(({ theme }) => ({
   position: 'absolute',
   bottom: 0,
