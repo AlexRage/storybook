@@ -123,6 +123,7 @@ export const Loader: FC<LoaderProps & ComponentProps<typeof ProgressWrapper>> = 
     const { value, modules } = progress;
     let { message } = progress;
     if (modules) message += ` ${modules.complete} / ${modules.total} modules`;
+    console.log(progress);
     return (
       <ProgressWrapper
         aria-label="Content is loading..."
